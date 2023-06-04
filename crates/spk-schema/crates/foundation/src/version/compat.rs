@@ -99,6 +99,7 @@ pub struct ComponentsMissing {
 pub enum IncompatibleReason {
     ComponentsMissing(ComponentsMissing),
     ConflictingEmbeddedPackage(PkgNameBuf),
+    EmbeddedComponentsMissing(PkgNameBuf, ComponentsMissing),
     Other(String),
 }
 
@@ -131,6 +132,30 @@ impl std::fmt::Display for IncompatibleReason {
                     f,
                     "embedded package conflicts with existing package in solve: {pkg}"
                 )
+            }
+            IncompatibleReason::EmbeddedComponentsMissing(
+                pkg,
+                ComponentsMissing {
+                    package,
+                    provided,
+                    missing,
+                },
+            ) => {
+                write!(f, "{pkg} embeds {package} but does not provide all required components: needed {}, have {}",
+                 missing
+                     .iter()
+                     .map(Component::to_string)
+                     .join("\n"),
+                 {
+                     if provided.is_empty() {
+                         "none".to_owned()
+                     } else {
+                         provided
+                             .iter()
+                             .map(Component::to_string)
+                             .join("\n")
+                     }
+                 })
             }
             IncompatibleReason::Other(msg) => f.write_str(msg),
         }
