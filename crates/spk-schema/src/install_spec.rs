@@ -95,6 +95,7 @@ impl From<RawInstallSpec> for InstallSpec {
                     }
                 })
                 .into();
+            component.embedded_components.set_fabricated();
         }
 
         install
