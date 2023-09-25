@@ -1703,6 +1703,16 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "0717cef1bc8b636c6e1c1bbdefc09e6322da8a9321966e8928ef80d20f7f770f"
 
 [[package]]
+name = "lint_proc_macro"
+version = "0.36.0"
+dependencies = [
+ "indicatif",
+ "ngrammatic",
+ "quote",
+ "syn 2.0.12",
+]
+
+[[package]]
 name = "linux-raw-sys"
 version = "0.0.46"
 source = "registry+https://github.com/rust-lang/crates.io-index"

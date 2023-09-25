@@ -43,7 +43,7 @@ impl Run for Lint {
                     false => {
                         println!("{} {}:", "Failed".red(), spec.display());
                         for lint in s.lints {
-                            println!("{} {}", "----->".red(), lint.message());
+                            println!("{} {}", "----->".red(), lint);
                         }
                         out = 1;
                     }

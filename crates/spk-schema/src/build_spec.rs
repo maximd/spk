@@ -6,6 +6,8 @@ use std::collections::{HashMap, HashSet};
 use std::hash::Hash;
 
 use itertools::Itertools;
+use lint_proc_macro::Lint;
+use ngrammatic::CorpusBuilder;
 use serde::{Deserialize, Serialize};
 use spk_schema_foundation::ident_build::BuildId;
 use spk_schema_foundation::name::PkgName;
@@ -110,7 +112,7 @@ impl AutoHostVars {
 }
 
 /// A set of structured inputs used to build a package.
-#[derive(Clone, Debug, Eq, Hash, Ord, PartialEq, PartialOrd, Serialize)]
+#[derive(Clone, Debug, Eq, Hash, Lint, Ord, PartialEq, PartialOrd, Serialize)]
 pub struct BuildSpec {
     pub script: Script,
     #[serde(default, skip_serializing_if = "Vec::is_empty")]

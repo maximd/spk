@@ -5,6 +5,7 @@ codegen-units = 1
 [workspace]
 members = [
     "crates/progress_bar_derive_macro",
+    "crates/lint_proc_macro",
     "crates/spfs-encoding",
     "crates/spfs",
     "crates/spk-build",
