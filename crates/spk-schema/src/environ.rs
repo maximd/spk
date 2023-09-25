@@ -38,7 +38,7 @@ pub enum OpKind {
 }
 
 /// An operation performed to the environment
-#[derive(Clone, Debug, Eq, Hash, Lint, Ord, PartialEq, PartialOrd, Serialize)]
+#[derive(Clone, Debug, Eq, Hash, Ord, PartialEq, PartialOrd, Serialize)]
 #[serde(untagged)]
 pub enum EnvOp {
     Append(AppendEnv),
@@ -341,7 +341,7 @@ impl<'de> serde::de::Visitor<'de> for EnvOpVisitor {
 ///
 /// The separator used defaults to the path separator for the current
 /// host operating system (':' for unix, ';' for windows)
-#[derive(Clone, Debug, Eq, Hash, Ord, PartialEq, PartialOrd, Serialize)]
+#[derive(Clone, Debug, Eq, Hash, Lint, Ord, PartialEq, PartialOrd, Serialize)]
 pub struct AppendEnv {
     pub append: String,
     pub value: String,
@@ -430,7 +430,7 @@ impl EnvPriority {
 ///
 /// The separator used defaults to the path separator for the current
 /// host operating system (':' for unix, ';' for windows)
-#[derive(Clone, Debug, Eq, Hash, Ord, PartialEq, PartialOrd, Serialize)]
+#[derive(Clone, Debug, Eq, Hash, Lint, Ord, PartialEq, PartialOrd, Serialize)]
 pub struct PrependEnv {
     pub prepend: String,
     pub value: String,
@@ -476,7 +476,7 @@ impl PrependEnv {
 }
 
 /// Operates on an environment variable by setting it to a value
-#[derive(Clone, Debug, Eq, Hash, Ord, PartialEq, PartialOrd, Serialize)]
+#[derive(Clone, Debug, Eq, Hash, Lint, Ord, PartialEq, PartialOrd, Serialize)]
 pub struct SetEnv {
     pub set: String,
     pub value: String,
