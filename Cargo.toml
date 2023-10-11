@@ -5,7 +5,6 @@ codegen-units = 1
 [workspace]
 members = [
     "crates/progress_bar_derive_macro",
-    "crates/lint_proc_macro",
     "crates/spfs-encoding",
     "crates/spfs",
     "crates/spk-build",
@@ -53,9 +52,10 @@ futures-core = "0.3.28"
 fuser = "0.12"
 glob = "0.3"
 indicatif = "0.17.5"
-itertools = "0.12"
+itertools = "0.10"
 libc = "0.2.80"
 miette = "5.10"
+ngrammatic = "0.4.0"
 nix = "0.26.2"
 nom = "7.1"
 nom-supreme = "0.8"
@@ -76,6 +76,7 @@ serde_yaml = "0.9.25"
 shellexpand = "3.1.0"
 static_assertions = "1.1"
 strip-ansi-escapes = "0.1.1"
+struct-field-names-as-array = "0.3.0"
 strum = { version = "0.24", features = ["derive"] }
 thiserror = "1.0"
 tempfile = "3.3"

@@ -1602,15 +1602,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "itertools"
-version = "0.12.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "25db6b064527c5d482d0423354fcd07a89a2dfe07b67892e62411946db7f07b0"
-dependencies = [
- "either",
-]
-
-[[package]]
 name = "itoa"
 version = "1.0.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1701,16 +1692,6 @@ name = "linked-hash-map"
 version = "0.5.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "0717cef1bc8b636c6e1c1bbdefc09e6322da8a9321966e8928ef80d20f7f770f"
-
-[[package]]
-name = "lint_proc_macro"
-version = "0.36.0"
-dependencies = [
- "indicatif",
- "ngrammatic",
- "quote",
- "syn 2.0.12",
-]
 
 [[package]]
 name = "linux-raw-sys"
@@ -3650,7 +3631,7 @@ dependencies = [
  "async-trait",
  "dunce",
  "futures",
- "itertools 0.12.0",
+ "itertools 0.10.5",
  "miette",
  "relative-path",
  "rstest",
@@ -3714,7 +3695,7 @@ dependencies = [
  "clap_complete",
  "colored",
  "futures",
- "itertools 0.12.0",
+ "itertools 0.10.5",
  "miette",
  "rstest",
  "serde",
@@ -3739,7 +3720,7 @@ dependencies = [
  "async-trait",
  "clap 4.4.7",
  "colored",
- "itertools 0.12.0",
+ "itertools 0.10.5",
  "miette",
  "nom",
  "nom-supreme",
@@ -3784,7 +3765,7 @@ dependencies = [
  "colored",
  "dunce",
  "futures",
- "itertools 0.12.0",
+ "itertools 0.10.5",
  "miette",
  "serde",
  "serde_json",
@@ -3854,7 +3835,7 @@ dependencies = [
  "clap 4.4.7",
  "colored",
  "futures",
- "itertools 0.12.0",
+ "itertools 0.10.5",
  "miette",
  "spfs",
  "spk-build",
@@ -4061,7 +4042,7 @@ dependencies = [
  "format_serde_error",
  "ignore",
  "indexmap 1.9.3",
- "itertools 0.12.0",
+ "itertools 0.10.5",
  "miette",
  "ngrammatic",
  "nom",
@@ -4079,6 +4060,7 @@ dependencies = [
  "spk-schema-foundation",
  "spk-schema-ident",
  "spk-schema-liquid",
+ "struct-field-names-as-array",
  "strum",
  "sys-info",
  "tempfile",
@@ -4096,7 +4078,7 @@ dependencies = [
  "enum_dispatch",
  "format_serde_error",
  "ignore",
- "itertools 0.12.0",
+ "itertools 0.10.5",
  "miette",
  "nom",
  "nom-supreme",
@@ -4125,7 +4107,7 @@ dependencies = [
  "colored",
  "data-encoding",
  "format_serde_error",
- "itertools 0.12.0",
+ "itertools 0.10.5",
  "miette",
  "nom",
  "nom-supreme",
@@ -4167,7 +4149,7 @@ dependencies = [
  "ctrlc",
  "dyn-clone",
  "futures",
- "itertools 0.12.0",
+ "itertools 0.10.5",
  "miette",
  "num-bigint",
  "num-format",
@@ -4204,7 +4186,7 @@ dependencies = [
  "ctrlc",
  "dyn-clone",
  "futures",
- "itertools 0.12.0",
+ "itertools 0.10.5",
  "miette",
  "once_cell",
  "priority-queue",
@@ -4239,7 +4221,7 @@ dependencies = [
  "dyn-clone",
  "futures",
  "glob",
- "itertools 0.12.0",
+ "itertools 0.10.5",
  "miette",
  "once_cell",
  "rstest",
@@ -4259,7 +4241,7 @@ version = "0.38.0"
 dependencies = [
  "colored",
  "console",
- "itertools 0.12.0",
+ "itertools 0.10.5",
  "miette",
  "spfs",
  "spk-schema",
@@ -4275,7 +4257,7 @@ dependencies = [
  "dashmap",
  "enum_dispatch",
  "futures",
- "itertools 0.12.0",
+ "itertools 0.10.5",
  "miette",
  "once_cell",
  "rstest",
@@ -4305,7 +4287,7 @@ dependencies = [
  "glob",
  "ignore",
  "indexmap 1.9.3",
- "itertools 0.12.0",
+ "itertools 0.10.5",
  "miette",
  "nom",
  "once_cell",
@@ -4358,6 +4340,26 @@ name = "strsim"
 version = "0.10.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "73473c0e59e6d5812c5dfe2a064a6444949f089e20eec9a2e5506596494e4623"
+
+[[package]]
+name = "struct-field-names-as-array"
+version = "0.3.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "22ba4bae771f9cc992c4f403636c54d2ef13acde6367583e99d06bb336674dd9"
+dependencies = [
+ "struct-field-names-as-array-derive",
+]
+
+[[package]]
+name = "struct-field-names-as-array-derive"
+version = "0.3.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a2dbf8b57f3ce20e4bb171a11822b283bdfab6c4bb0fe64fa729f045f23a0938"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn 2.0.38",
+]
 
 [[package]]
 name = "strum"
