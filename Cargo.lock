@@ -1602,6 +1602,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "itertools"
+version = "0.12.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "25db6b064527c5d482d0423354fcd07a89a2dfe07b67892e62411946db7f07b0"
+dependencies = [
+ "either",
+]
+
+[[package]]
 name = "itoa"
 version = "1.0.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3631,7 +3640,7 @@ dependencies = [
  "async-trait",
  "dunce",
  "futures",
- "itertools 0.10.5",
+ "itertools 0.12.0",
  "miette",
  "relative-path",
  "rstest",
@@ -3695,7 +3704,7 @@ dependencies = [
  "clap_complete",
  "colored",
  "futures",
- "itertools 0.10.5",
+ "itertools 0.12.0",
  "miette",
  "rstest",
  "serde",
@@ -3720,7 +3729,7 @@ dependencies = [
  "async-trait",
  "clap 4.4.7",
  "colored",
- "itertools 0.10.5",
+ "itertools 0.12.0",
  "miette",
  "nom",
  "nom-supreme",
@@ -3765,7 +3774,7 @@ dependencies = [
  "colored",
  "dunce",
  "futures",
- "itertools 0.10.5",
+ "itertools 0.12.0",
  "miette",
  "serde",
  "serde_json",
@@ -3835,7 +3844,7 @@ dependencies = [
  "clap 4.4.7",
  "colored",
  "futures",
- "itertools 0.10.5",
+ "itertools 0.12.0",
  "miette",
  "spfs",
  "spk-build",
@@ -4042,7 +4051,7 @@ dependencies = [
  "format_serde_error",
  "ignore",
  "indexmap 1.9.3",
- "itertools 0.10.5",
+ "itertools 0.12.0",
  "miette",
  "ngrammatic",
  "nom",
@@ -4078,7 +4087,7 @@ dependencies = [
  "enum_dispatch",
  "format_serde_error",
  "ignore",
- "itertools 0.10.5",
+ "itertools 0.12.0",
  "miette",
  "nom",
  "nom-supreme",
@@ -4107,7 +4116,7 @@ dependencies = [
  "colored",
  "data-encoding",
  "format_serde_error",
- "itertools 0.10.5",
+ "itertools 0.12.0",
  "miette",
  "nom",
  "nom-supreme",
@@ -4149,7 +4158,7 @@ dependencies = [
  "ctrlc",
  "dyn-clone",
  "futures",
- "itertools 0.10.5",
+ "itertools 0.12.0",
  "miette",
  "num-bigint",
  "num-format",
@@ -4186,7 +4195,7 @@ dependencies = [
  "ctrlc",
  "dyn-clone",
  "futures",
- "itertools 0.10.5",
+ "itertools 0.12.0",
  "miette",
  "once_cell",
  "priority-queue",
@@ -4221,7 +4230,7 @@ dependencies = [
  "dyn-clone",
  "futures",
  "glob",
- "itertools 0.10.5",
+ "itertools 0.12.0",
  "miette",
  "once_cell",
  "rstest",
@@ -4241,7 +4250,7 @@ version = "0.38.0"
 dependencies = [
  "colored",
  "console",
- "itertools 0.10.5",
+ "itertools 0.12.0",
  "miette",
  "spfs",
  "spk-schema",
@@ -4257,7 +4266,7 @@ dependencies = [
  "dashmap",
  "enum_dispatch",
  "futures",
- "itertools 0.10.5",
+ "itertools 0.12.0",
  "miette",
  "once_cell",
  "rstest",
@@ -4287,7 +4296,7 @@ dependencies = [
  "glob",
  "ignore",
  "indexmap 1.9.3",
- "itertools 0.10.5",
+ "itertools 0.12.0",
  "miette",
  "nom",
  "once_cell",
